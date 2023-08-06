@@ -69,3 +69,8 @@ num_min_workers=len(df[
     )
 rich_percentage=round(((len(df[df['salary']=='>50K']))/number_of_people*100), 1)#round has to be on the start because of the error "'float' object has no attribute 'round'
 
+highest_earning_country=df.loc[df['salary']=='>50K'][['native-country']].value_counts().idxmax()
+highest_earning_country_percentage=round(((df.loc[df['salary']=='>50K'][['native-country']].value_counts().max())/number_of_people*100), 1)
+
+top_IN_occupation=df.loc[df['salary']=='>50K'][['occupation']].value_counts().idxmax()
+print(top_IN_occupation)
