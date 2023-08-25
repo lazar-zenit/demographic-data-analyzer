@@ -73,4 +73,3 @@ highest_earning_country=df.loc[df['salary']=='>50K'][['native-country']].value_c
 highest_earning_country_percentage=round(((df.loc[df['salary']=='>50K'][['native-country']].value_counts().max())/number_of_people*100), 1)
 
 top_IN_occupation=df.loc[df['salary']=='>50K'][['occupation']].value_counts().idxmax()
-print(top_IN_occupation)
